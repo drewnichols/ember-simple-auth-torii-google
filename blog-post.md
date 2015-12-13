@@ -60,21 +60,20 @@ How to setup and use ember-simple-auth 1.0+ with torii and google oauth2 authent
   };
   ```
 
- 1. Create authenticator
+ 1. Create a custom torii-google authenticator
+ Up till now most of what you've built has been boilerplate ember-simple-auth code taken right from the ember-simple-auth readme (https://github.com/simplabs/ember-simple-auth#readme). Now you'll create a custom authenticator which will complete the authentication code returned by Google and allow us to use it get the user's email address, name and google profile. 
  ```javascript
+  //app/authenticators/torii.js
   import Ember from 'ember';
   import Torii from 'ember-simple-auth/authenticators/torii';
 
-  const { RSVP } = Ember;
   const { service } = Ember.inject;
 
   export default Torii.extend({
     torii: service('torii'),
-    authenticate() {
-      return new RSVP.Promise((resolve, reject) => {
-        this._super(...arguments).then(function (data) {
-          console.log(data);
-        }).catch(reject);
+    authenticate(options) {
+      this._super(options).then(function (data) {
+        console.log(options, data);
       });
     }
   });
