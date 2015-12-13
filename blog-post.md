@@ -3,8 +3,10 @@ Ember-simple-auth-torii-google
 How to setup and use ember-simple-auth 1.0+ with torii and google oauth2 authentication. 
 
  1.  Getting Google OAUTH Keys
- This page (https://developers.google.com/identity/protocols/OAuth2) gives a overview of the process but I'll walk you through the basic steps here. 
-  1. first you need create your account by visiting here: https://console.developers.google.com and signup with your gmail account. (I used my private account for this walkthough and I don't believe I had registered it before. Hopefully your experience is the same.) Once you're signed in you'll want to enable apis for your project. In my case this also required creating the application. 
+ 
+ This page (https://developers.google.com/identity/protocols/OAuth2) gives a overview of the process but I'll walk you through the basic steps here. I'll walk you through it here step by step. (if you have already completed this you can skip to step TBD).
+ 
+ First you need create your account by visiting here: https://console.developers.google.com and signup with your gmail account. (I used my private account for this walkthough and I don't believe I had registered it before. Hopefully your experience is the same.) Once you're signed in you'll want to enable apis for your project. In my case this also required creating the application. 
 
  1. Create your ember project
  ```
